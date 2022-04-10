@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/bootstrap";
+
+.card-image{
+    width:inherit ;
+    max-height: 160px;
+    padding-right: 4px;
+    padding-left: 0px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }

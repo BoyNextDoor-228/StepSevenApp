@@ -1,0 +1,836 @@
+{
+  "trainings": [
+    {
+      "id": 1,
+      "kindOfSport": "Йога",
+      "isWithTrainer": false,
+      "title": "Жиросжигающая йога",
+      "short_desc": "Комбинация из асан йоги и фитнес упражнений",
+      "description": "Программа состоит из 6 тренировок. Основной акцент сделан на дыхании и правильное технике выполнения. Занимаясь по программе “Жиросжигающая йога” ты похудеешь, станешь гибче и выносливее",
+      "picture": "1_1",
+      "trainer": 1648813805968,
+      "link": "https://vk.com/away.php?to=https%3A%2F%2Fus04web.zoom.us%2Fj%2F72191653553%3Fpwd%3DN1fB3duahUPTRivSq37hhsBQ0pK7KR.1&cc_key=",
+      "nextTrainingTime": "2022-03-30 10:20",
+      "users": [
+        1649263214606,
+        1649439027331
+      ],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "kindOfSport": "Йога",
+      "isWithTrainer": true,
+      "title": "Йога для начинающих",
+      "short_desc": "Начните плавно свой осознанный путь к практике йоги!",
+      "description": "Программа состоит из 12 практических занятий. Вы научитесь техникам расслабления, разовьете гибкость, силу, выносливость, улучшите качество жизни и откроете для себя новые горизонты ощущений",
+      "picture": "1_2",
+      "trainer": 1648813805968,
+      "link": "www.amogus.aboba.com",
+      "nextTrainingTime": "2022-03-30 11:30",
+      "users": [
+        1649263214606
+      ],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "kindOfSport": "Йога",
+      "isWithTrainer": true,
+      "title": "Погружение в йогу",
+      "short_desc": "Окунитесь в мир йоги!",
+      "description": "Программа по йоге состоит из 12 уроков продолжительностью 50-70 минут.Шесть из них направлены на развитие определенного вида подвижности (движения к шпагату, позе лотоса, к ноге за головой и т.д.). Седьмой - универсальный, задействует все виды подвижности. Чередование занятий на разные виды подвижности и выполнение между ними универсального комплекса быстрее приведет к желаемому результату. ",
+      "picture": "1_3",
+      "trainer": 1648813805968,
+      "link": "www.amogus.aboba.com",
+      "nextTrainingTime": "2022-03-30 13:40",
+      "users": [],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "kindOfSport": "Йога",
+      "isWithTrainer": true,
+      "title": "Йога-стретчинг",
+      "short_desc": "Тренировки позволяющие растянуть все тело, снять усталость и напряжение в мышцах.",
+      "description": "Программа состоит из 12 практических занятий. Для начинающих систематические тренировки стрейч-йоги очень полезны, поскольку они способствуют: обретению гибкости,  повышению работоспособности, снижению веса. На занятиях вы всегда будете получать удовольствие от процесса и отвлекаться от ежедневной рутины. Любой стресс сразу пройдет. Уже при выполнении первого упражнения исчезнет боль и усталость, и через некоторое время вы ощутите покой.",
+      "picture": "1_4",
+      "trainer": 1648813805968,
+      "link": "www.amogus.aboba.com",
+      "nextTrainingTime": "2022-03-30 10:00",
+      "users": [],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "kindOfSport": "Йога",
+      "isWithTrainer": true,
+      "title": "Йога для лица",
+      "short_desc": "Уникальная древняя практика, позволяющая нормализовать работу организма и обрести душевный контроль и гармонию",
+      "description": "Программа состоит из 12 уроков продолжительностью всего 15 минут. Тренер в простой форме подсккажет, как с помощью йоги можно подтянуть лицо, тонизировать лицевые мышцы, снять их напряжение, восстановить упругость, эластичность и молодость вашей кожи. Каждый урок сопровождается подробным описанием каждого действия, наглядной демонстрацией и необходимыми комментариями. Следуя всем указаниям, Вы сможете без труда освоить такое направление, как йога для лица и получать максимальное удовольствие от занятий. Будте уверены, результат не заставит себя ждать.",
+      "picture": "1_5",
+      "trainer": 1648813805968,
+      "link": "www.amogus.aboba.com",
+      "nextTrainingTime": "2022-03-30 10:00",
+      "users": [
+        1649263214606
+      ],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "kindOfSport": "Кардио",
+      "isWithTrainer": false,
+      "title": "Легкое и эффективное кардио",
+      "short_desc": "Легкая кардио-нагрузка, которая сожжет ваши калории",
+      "description": "З занятия в неделю по плану программы тренировок и вы укрепите мышцы всего тела! Вы можете адаптировать программу под свой уровень подготовки - увеличивая время работы или сокращая интервалы отдыха, если ваш организм хорошо адаптирован.",
+      "picture": "2_1",
+      "trainer": 1648816456417,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [
+        1649263214606
+      ],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "kindOfSport": "Кардио",
+      "isWithTrainer": true,
+      "title": "Классическое кардио",
+      "short_desc": "Максимально мощная и эффективная программа тренировок",
+      "description": "Данные кадрио-тренировки включат в работу все мышцы вашего тела! На протяжении всей тренировки пульс поддерживается на высоких, но не экстремальных значениях, что позволяет эффективно сжигать калории и строить подтянутое тело.",
+      "picture": "2_2",
+      "trainer": 1648816456417,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [
+        1649439027331
+      ],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "kindOfSport": "Кардио",
+      "isWithTrainer": true,
+      "title": "Начинаем худеть!",
+      "short_desc": "Начни свой путь к идеальному телу",
+      "description": "Эти 10 тренировок созданы специально, чтобы помочь вам начать свой путь к идеальному телу. Вы освоите основные упражнения на все мышечные группы, такие как приседания, выпады, скручивания на пресс, планки, отжимания и многие другие. Тренировки построены в интервальной манере, что позволит вам начать эффективно сжигать лишний жир и уменьшать объемы вашего тела. Все тренировки состоят из упражнений с собственным телом, поэтому вам не понадобится дополнительное оборудование.",
+      "picture": "2_3",
+      "trainer": 1648816456417,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "kindOfSport": "Кардио",
+      "isWithTrainer": true,
+      "title": "Похудей за две недели",
+      "short_desc": "Хочешь быстро похудеть? - нужно мощно поработать!",
+      "description": "Вас ждет 12  функциональных тренировок и 3 тренировки по растяжке (для восстановления). Выполняйте ежедневно одну функциональную тренировку и сразу же после нее растяжку, не забывайте про правильное питание и уже через две недели вы обязательно увидите результат)",
+      "picture": "2_4",
+      "trainer": 1648816456417,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "kindOfSport": "Пилатес",
+      "isWithTrainer": false,
+      "title": "Пилатес для новичков",
+      "short_desc": "Начни свои тренировки",
+      "description": "Разработана для тех кто только втягивается в спорт! Пилатес это система упражнений направленная на оздоровления суставов, укрепление всех групп мышц, снятие напряжений и болей в теле! Так же пилатес поможет избавиться от стресса, нормализует сон и зарядит вас энергией! Вас ждут короткие тренировки (20-25 минут) с не высокой интенсивностью и сложностью",
+      "picture": "3_1",
+      "trainer": 16488473265781,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "kindOfSport": "Пилатес",
+      "isWithTrainer": true,
+      "title": "Пилатес медиум",
+      "short_desc": "Научись чувствовать свое тело, контролировать мысли и разум",
+      "description": "Программа включает 45 занятий по 20 минут. Комплекс упражнений выполняется последовательно, от простого к сложному, с модификациями и правилами перехода. Упражнения укрепляют мышечный корсет, делают суставы более гибкими и подвижными, улучшают осанку и, координацию.",
+      "picture": "3_2",
+      "trainer": 16488473265781,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "kindOfSport": "Пилатес",
+      "isWithTrainer": true,
+      "title": "Пилатес для новичков",
+      "short_desc": "Повысьте эластичность своих мышц!",
+      "description": "Разработана для тех кто только втягивается в спорт! Пилатес это система упражнений направленная на оздоровления суставов, укрепление всех групп мышц, снятие напряжений и болей в теле! Так же пилатес поможет избавиться от стресса, нормализует сон и зарядит вас энергией! Вас ждут короткие тренировки (20-25 минут) с не высокой интенсивностью и сложностью",
+      "picture": "3_3",
+      "trainer": 16488473265781,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "kindOfSport": "Стретчинг",
+      "isWithTrainer": false,
+      "title": "Продольный шпагат",
+      "short_desc": "Развиваем гибкость и пластичность",
+      "description": "Программа состоит из 18 занятий с разными уровнями сложности. Работая над растяжкой, вы попутно укрепите позвоночник и суставы, у вас улучшится осанка, да и самооценка поднимется! Кроме того, упражнения на растяжку и гибкость - это отличная профилактика травм мышц и суставов.",
+      "picture": "4_1",
+      "trainer": 1648813257258,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [
+        1649439027331
+      ],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "kindOfSport": "Стретчинг",
+      "isWithTrainer": true,
+      "title": "Растяжка после тренировок",
+      "short_desc": "Улучшите свою гибкость вместе с нами!",
+      "description": "Программа \"Растяжка после тренировок\" - это набор из пятнадцати комплексов упражнений на растяжку и восстановление после основных тренировок. Пройдя данную программу, вы улучшите гибкость, научитесь точнее чувствовать свои мышцы, сделаете их более эластичными.Дополнительное оборудование не требуется.",
+      "picture": "4_2",
+      "trainer": 1648813257258,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "kindOfSport": "Стретчинг",
+      "isWithTrainer": true,
+      "title": "Поперечный шпагат",
+      "short_desc": "Стройное и пластичное тело за пару недель",
+      "description": "Двадцать одно занятие на развитие гибкости и пластичности.Занятия проходят в плавном спокойном темпе, упражнения выполняются в динамике. Система тренировок поможет вам сесть на шпагат без особых усилий и специальной физической подготовки.",
+      "picture": "4_3",
+      "trainer": 1648813257258,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "kindOfSport": "Аэробика",
+      "isWithTrainer": true,
+      "title": "Body Combat",
+      "short_desc": "Научитесь аэробике формата Body Combat",
+      "description": "Набор энергичных боевых движений, направленных на развитие спортивной формы, развития быстроты и силы.-Body Combat — это аэробная тренировка, которая приведет ваше тело в форму в рекордно короткие сроки. Программа разработана на основе таких видов боевых искусств как тхэквондо, каратэ и бокс. Ударное сочетание таких разнообразных движений укрепит ваши мышцы, улучшите осанку и координацию, избавитесь от лишнего жира и целлюлита. Программа Body Combat длится 55 минут и включает в себя 10 занятий.",
+      "picture": "5_1",
+      "trainer": -1,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "kindOfSport": "Аэробика",
+      "isWithTrainer": true,
+      "title": "Танцевальная аэробика",
+      "short_desc": "Не можете устоять на месте при звуках музыки? Тогда выбирайте танцевальную аэробику для похудения",
+      "description": "-Курс состоит из 11 занятий. В основе занятий лежит повторение танцевальных шагов и гимнастических упражнений. Танцевальная аэробика - это отличная возможность для укрепления мышц и поддержания организма в тонусе.",
+      "picture": "5_2",
+      "trainer": -1,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "kindOfSport": "Аэробика",
+      "isWithTrainer": true,
+      "title": "Степ-аэробика",
+      "short_desc": "Настоящий удар по проблемным зонам!",
+      "description": "-Курс состоит из 14 занятий. Идеально подходит для похудения, проработки мышц ног и ягодиц. Все упражнения комплекса выполняются на небольшой возвышенности, что способствует максимальному жиросжиганию. Тренировка проходит под ритмичную музыку без перерывов и отдыха.",
+      "picture": "5_3",
+      "trainer": -1,
+      "link": "",
+      "nextTrainingTime": "",
+      "users": [],
+      "exercises": [
+        {
+          "id": 7525,
+          "pic": "nvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7325,
+          "pic": "refwevdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7555,
+          "pic": "fewvndvsvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        },
+        {
+          "id": 7565,
+          "pic": "dnvdsnsnvsjk",
+          "desc": "dkidcidsmvsdkc",
+          "path": "djcndskcnsdcsj"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1647274207906,
+      "firstname": "Амогус",
+      "lastname": "Абоба",
+      "email": "amogus@aboba",
+      "gender": "Мужской",
+      "pwd": "228228",
+      "age": 18,
+      "sports": [],
+      "clients": []
+    },
+    {
+      "id": 1648138836025,
+      "firstname": "Иван",
+      "lastname": "Иванов",
+      "email": "hello@hi",
+      "pwd": "322322",
+      "age": 102,
+      "sports": [],
+      "clients": [],
+      "gender": "Мужской"
+    },
+    {
+      "id": 1648813805968,
+      "firstname": "trainer 1 fn",
+      "lastname": "trainer 1 ln",
+      "email": "trainer1@lol",
+      "pwd": "322322",
+      "age": 28,
+      "sports": [],
+      "clients": [],
+      "gender": "Мужской",
+      "kindOfSport": "Йога",
+      "exp": 2,
+      "achievements": "раз два три"
+    },
+    {
+      "id": 1648813257258,
+      "firstname": "trainer 2 fn",
+      "lastname": "trainer 2 ln",
+      "email": "trainer2@lol",
+      "pwd": "322322",
+      "age": 28,
+      "sports": [],
+      "clients": [],
+      "gender": "Женский",
+      "kindOfSport": "Стретчинг",
+      "exp": 3,
+      "achievements": "Четыре пять шесть"
+    },
+    {
+      "id": 1648816456417,
+      "firstname": "trainer 3 fn",
+      "lastname": "trainer 3 ln",
+      "email": "trainer3@lol",
+      "pwd": "322322",
+      "age": 28,
+      "sports": [],
+      "clients": [],
+      "gender": "Мужской",
+      "kindOfSport": "Кардио",
+      "exp": 6,
+      "achievements": "семь восемь девять"
+    },
+    {
+      "id": 16488473265781,
+      "firstname": "trainer 4 fn",
+      "lastname": "trainer 4 ln",
+      "email": "trainer4@lol",
+      "pwd": "322322",
+      "age": 28,
+      "sports": [],
+      "clients": [],
+      "gender": "Женский",
+      "kindOfSport": "Пилатес",
+      "exp": 6,
+      "achievements": "десять одиннадцать двенадцать"
+    },
+    {
+      "id": 1649263214606,
+      "firstname": "исвосоы",
+      "lastname": "отвомт",
+      "email": "kdvksnk@kvnsklvs",
+      "pwd": "228228",
+      "age": 18,
+      "sports": [
+        1,
+        5,
+        2,
+        6
+      ],
+      "clients": [],
+      "gender": "Мужской",
+      "kindOfSport": "Стретчинг",
+      "exp": 10,
+      "achievements": "алмлдыьмы"
+    },
+    {
+      "id": 1649439027331,
+      "firstname": "Иван",
+      "lastname": "Иванов",
+      "email": "ivan@ivan",
+      "pwd": "228228",
+      "age": 23,
+      "sports": [
+        1,
+        13,
+        7
+      ],
+      "clients": [],
+      "gender": "Мужской",
+      "kindOfSport": "",
+      "exp": -1,
+      "achievements": ""
+    }
+  ]
+}
