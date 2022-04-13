@@ -1,9 +1,10 @@
 export enum KindsOfSport
 {
     YOGA = "Йога",
-    SWIMMING = "Плавание",
+    AEROBICS = "Аэробика",
     STRETCHING = "Растяжка",
-    ABS = "Пресс"
+    PILATES = "Пилатес",
+    CARDIO = "Кардио"
 }
 
 export enum Gender
@@ -26,10 +27,11 @@ export interface ITraining {
     title        : string;
     short_desc   : string;
     description  : string;
+    trainingsAmount: number;
     picture      : string;
-    trainer      : number; 
+    trainer      : { t_id: number, name: string }; 
     exercises    : IExercise[];
-    duration     : number;
+    load         : string;
     users        : number[];
     link         : string;
     nextTrainingTime : string;
@@ -42,6 +44,7 @@ export interface IExercise
     pic      : string;
     desc     : string;
     path     : string;
+    duration : number;
 }
 
 export interface ITrainer

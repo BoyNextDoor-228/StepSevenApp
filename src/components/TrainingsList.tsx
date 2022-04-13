@@ -4,64 +4,27 @@ import { Col, Container, Row } from 'react-bootstrap'
 import TrainingCard from "./Cards/TrainingCard";
 import Context from "../context";
 import { ITraining } from "../types/mainSystem";
+import Loader from "./Others/Loader";
 
 const TrainingList: React.FC = () => {
     var { trainings, sysLoading } = useContext(Context)
     const immutableTrainings: ITraining[] = trainings
-    //const [isWithTrainer, setIsWithTrainer] = useState(false)
     const [stateTrainings, setStateTrainings] = useState(trainings)
-    const [filter, setFilter] = useState({isWithTrainer: true, trainingType: "ALL"})
+    const [filter, setFilter] = useState({isWithTrainer: true, trainingType: "ALL", isInit: true})
 
-
-
-    // const [trainingsFilter, setTrainingsFilter] = useState("Сбросить")   
-
-    // const filterTrainingsListByTrainer = (swtrnr: boolean) => {
-    //     trainings = immutableTrainings.filter( (training: ITraining) => training.isWithTrainer === swtrnr )
-    //     setStateTrainings(trainings)
-    // } 
-
-    // const filterTrainingsListBySport = (sport: string) => {
-    //     if (sport === "Сбросить") 
-    //     {
-    //         if (isWithTrainer)
-    //         {
-    //             setTrainingsFilter("Сбросить")
-    //             trainings = immutableTrainings.filter( (training: ITraining) => training.isWithTrainer === true )
-    //             setStateTrainings(trainings)
-    //         }
-    //         else 
-    //         {
-    //             setTrainingsFilter("Сбросить")
-    //             trainings = immutableTrainings.filter( (training: ITraining) => training.isWithTrainer === false )
-    //             setStateTrainings(trainings)
-    //         }
-            
-    //     }
-    //     else
-    //     {
-    //         if (isWithTrainer)
-    //         {
-    //             trainings = immutableTrainings.filter( (training:ITraining) => ( (training.kindOfSport === sport) && (training.isWithTrainer === true) ) )
-    //             setTrainingsFilter(sport)
-    //             setStateTrainings(trainings)
-    //         }
-    //         else
-    //         {
-    //             trainings = immutableTrainings.filter( (training:ITraining) => ( (training.kindOfSport === sport) && (training.isWithTrainer === false) ) )
-    //             setTrainingsFilter(sport)
-    //             setStateTrainings(trainings)
-    //         }
-    //     }
-    // }
 
     const filterTrainingsList = () => {
-        if (filter.isWithTrainer)
+        if (filter.isInit)
+        {
+            setStateTrainings(immutableTrainings)
+            return
+        }
+        if (filter.isWithTrainer === true)
         {
             trainings = immutableTrainings.filter( (training:ITraining) => ( (training.kindOfSport === filter.trainingType) && (training.isWithTrainer === true) ) )
             setStateTrainings(trainings)
         }
-        else if (!filter.isWithTrainer) 
+        else if (filter.isWithTrainer === false) 
         {
             trainings = immutableTrainings.filter( (training:ITraining) => ( (training.kindOfSport === filter.trainingType) && (training.isWithTrainer === false) ) )
             setStateTrainings(trainings)
@@ -75,7 +38,7 @@ const TrainingList: React.FC = () => {
 
     useEffect(() => { filterTrainingsList() }, [filter])
 
-    if (sysLoading) return (<h1>LOADING...</h1>)
+    if (sysLoading) return (<Loader/>)
 
     return(
         <div className="m-0 row" style={{height: "100%"}}>
@@ -97,12 +60,12 @@ const TrainingList: React.FC = () => {
                         <div className="h-50 d-flex justify-content-around">
                             <div className="d-inline h-50 px-3 py-1"
                                 style={{borderRadius: "15px", fontSize: "12px", backgroundColor: filter.isWithTrainer ? "#FFF" : "#767B91", color: filter.isWithTrainer ? "#767B91" : "#FFF" }}
-                                onClick={ () => setFilter({...filter, isWithTrainer: true}) }>
+                                onClick={ () => setFilter({...filter, isWithTrainer: true, isInit: false}) }>
                                 С тренером
                             </div>
                             <div className="d-inline h-50 px-3 pt-1"
                                 style={{borderRadius: "15px", fontSize: "12px", backgroundColor: filter.isWithTrainer ? "#767B91" : "#FFF", color: filter.isWithTrainer ? "#FFF" : "#767B91" }}
-                                onClick={ () => setFilter({...filter, isWithTrainer: false}) }> 
+                                onClick={ () => setFilter({...filter, isWithTrainer: false, isInit: false}) }> 
                                 Без тренера
                             </div>
                         </div>
@@ -112,38 +75,38 @@ const TrainingList: React.FC = () => {
                         <h5 className="ps-3 d-inline fw-bold">Направление</h5>
                         <span className="d-inline ps-3 fw-bold"
                               style={{ fontSize: "12px", color: "#767B91" }}
-                              onClick={ () => { setFilter({...filter, trainingType: "ALL"}) } }> 
+                              onClick={ () => { setFilter({...filter, trainingType: "ALL", isInit: true}) } }> 
                                         Сбросить
                                 </span>
                         <div className="h-50 pt-4">
                             <div className="d-block h-25 mt-2 ps-2">
                                 <div className="d-inline px-3 py-2 ms-2"
                                     style={{borderRadius: "15px", backgroundColor: filter.trainingType === "Йога" ? "#FFF" : "#767B91", fontSize: "12px", color: filter.trainingType === "Йога" ? "#767B91" : "#FFF" }}
-                                    onClick={ () => setFilter({...filter, trainingType: "Йога"}) }>
+                                    onClick={ () => setFilter({...filter, trainingType: "Йога", isInit: false}) }>
                                     Йога
                                 </div>
                                 <div className="d-inline px-3 py-2 ms-2"
                                     style={{borderRadius: "15px", backgroundColor: filter.trainingType === "Пилатес" ? "#FFF" : "#767B91", fontSize: "12px", color: filter.trainingType === "Пилатес" ? "#767B91" : "#FFF" }}
-                                    onClick={ () => setFilter({...filter, trainingType: "Пилатес"}) }> 
+                                    onClick={ () => setFilter({...filter, trainingType: "Пилатес", isInit: false}) }> 
                                     Пилатес
                                 </div>
                             </div>
                             <div className="d-block h-25 mt-4 ps-2">
                                 <div className="d-inline px-3 py-2 ms-2"
                                         style={{borderRadius: "15px", backgroundColor: filter.trainingType === "Кардио" ? "#FFF" : "#767B91", fontSize: "12px", color: filter.trainingType === "Кардио" ? "#767B91" : "#FFF" }}
-                                        onClick={ () => setFilter({...filter, trainingType: "Кардио"}) }>
+                                        onClick={ () => setFilter({...filter, trainingType: "Кардио", isInit: false}) }>
                                         Кардио
                                 </div>
                                 <div className="d-inline px-3 py-2 ms-2"
                                         style={{borderRadius: "15px", backgroundColor: filter.trainingType === "Стретчинг" ? "#FFF" : "#767B91", fontSize: "12px", color: filter.trainingType === "Стретчинг" ? "#767B91" : "#FFF" }}
-                                        onClick={ () => setFilter({...filter, trainingType: "Стретчинг"}) }> 
+                                        onClick={ () => setFilter({...filter, trainingType: "Стретчинг", isInit: false}) }> 
                                         Стретчинг
                                 </div>
                             </div>
                             <div className="d-block h-25 mt-4 ps-2">
                                 <div className="d-inline px-3 py-2 ms-2"
                                             style={{borderRadius: "15px", backgroundColor: filter.trainingType === "Аэробика" ? "#FFF" : "#767B91", fontSize: "12px", color: filter.trainingType === "Аэробика" ? "#767B91" : "#FFF" }}
-                                            onClick={ () => setFilter({...filter, trainingType: "Аэробика"}) }> 
+                                            onClick={ () => setFilter({...filter, trainingType: "Аэробика", isInit: false}) }> 
                                             Аэробика
                                 </div>
 

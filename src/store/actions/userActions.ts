@@ -8,7 +8,6 @@ export const getUserByEmail = (a_email: string, a_password: string): any => {
         const response = await axios.get("http://localhost:4200/users", {
             params: { email: a_email }
         })
-        console.log("aaaaaaaa",response.data[0])
         if (response.data[0] == undefined) { dispatch({ type: UserActionTypes.FETCH_USER_ERROR, payload: "NO_SUCH_USER" }) ; return "NO_SUCH_USER" }
         if (response.data[0]?.pwd === a_password) 
         {           
@@ -48,7 +47,6 @@ export const createNewUser = (a_firtsname: string, a_lastname: string, a_login: 
             params: { email: a_login }
         })
         const userInfo = await response.data
-        console.log(userInfo)
         if (userInfo.length) { return "USER_EXISTS" }
         else 
         { 

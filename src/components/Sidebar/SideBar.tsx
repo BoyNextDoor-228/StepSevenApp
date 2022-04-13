@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { logout } from "../../store/actions/userActions";
 
 
@@ -35,7 +34,7 @@ const Sidebar = () => {
         }
     }
 
-    return (<div className="" style={{height: "100%", backgroundColor: "#2A314B"  }}> 
+    return (<div style={{height: "100%", backgroundColor: "#2A314B"  }}> 
                 <div className="d-block  h-25 img-wrap">
                     <img className=" d-block p-3" style={{maxWidth: "100%", maxHeight: "100%"}} src={require('../../images/icons/logo.png')}/>
                 </div>
@@ -44,7 +43,7 @@ const Sidebar = () => {
                           className="text-decoration-none d-flex m-4 bg-light py-3 rounded-3 fw-bold"
                           style={{color: "#2A314B"}}
                           onClick={() => { activateLink(1) }}><img className="ps-4  h-25 w-25" src={require('../../images/icons/home.png')} style={imgStyles}/><span className="ps-3" style={{fontSize: "14px"}}>Главная</span></Link>
-                    <Link to={{ pathname: "/exercise" }} 
+                    <Link to={{ pathname: "/mycourses" }} 
                           className={LinkStyles}
                           style={ activeTab.secondLink ? {color: "#F0F6FF"} : {color: "#767C94"} }
                           onClick={() => { activateLink(2) }}><img className="ms-5" src={require(`../../images/icons/${activeTab.secondLink ? "courses-selected" : "courses"}.png`)} style={imgStyles}/><span className="ps-3" style={{fontSize: "14px"}}>Мои курсы</span></Link>

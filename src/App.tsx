@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import MainPage from './components/MainPage';
 import TrainingFullInfo from './components/TrainingFullInfo';
 import LoginPage from './components/Auth/LoginPage';
 import RegisterPage from './components/Auth/RegisterPage'; 
@@ -12,6 +11,9 @@ import { fetchData } from "./store/actions/systemActions";
 import Context from './context';
 import Sidebar from './components/Sidebar/SideBar';
 import ExerciseAnim from './components/ExerciseAnim';
+import Loader from './components/Others/Loader';
+import MyCourses from './components/MyCourses';
+import ExerciseList from './components/ExercisesComponents/ExercisesList';
 
 function App() {
 
@@ -24,7 +26,7 @@ function App() {
 
   useEffect(() => { dispatch(fetchData()) }, [isLoggedIn, stateIsLoggedIn])
 
-  while (loading || sysLoading) { return <h1>Loading...</h1> }
+  while (loading || sysLoading) { return <Loader/> }
 
   if ( stateIsLoggedIn )
   {
@@ -41,12 +43,14 @@ function App() {
               </div>
               <div style={{ height: "90%" }}>
                 <Routes>            
-                    <Route path="/home" element={ <MainPage/> } />
-                    <Route path="/training/:id" element={ <TrainingFullInfo/> } />
-                    <Route path="/trainings" element={ <TrainingList/> } />
-                    <Route path="/mytraininginfo/:id" element ={ <MyTrainingInfo/> }/>
-                    <Route path="/exercise" element={ <ExerciseAnim/> }/>
-                    <Route path="/*" element={ <MainPage/> } />
+                    <Route path="/home"               element = { <TrainingList/> } />
+                    <Route path="/training/:id"       element = { <TrainingFullInfo/> } />
+                    <Route path="/trainings"          element = { <TrainingList/> } />
+                    <Route path="/mytraininginfo/:id" element = { <MyTrainingInfo/> }/>
+                    <Route path="/exercise/:id"           element = { <ExerciseAnim/> }/>
+                    <Route path="/mycourses"          element = { <MyCourses/> } />
+                    <Route path="/exerciselist/:id"   element = { <ExerciseList/> }/>
+                    <Route path="/*"                  element = { <TrainingList/> } />
                   </Routes>
               </div>
 
