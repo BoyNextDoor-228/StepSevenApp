@@ -3,7 +3,6 @@ import TrainingFullInfo from './components/TrainingFullInfo';
 import LoginPage from './components/Auth/LoginPage';
 import RegisterPage from './components/Auth/RegisterPage'; 
 import TrainingList from './components/TrainingsList';
-import MyTrainingInfo from './components/MyTrainingsInfo';
 import { useTypedSelector } from '../src/hooks/useTypedSelector';
 import { useDispatch } from "react-redux";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -14,6 +13,8 @@ import ExerciseAnim from './components/ExerciseAnim';
 import Loader from './components/Others/Loader';
 import MyCourses from './components/MyCourses';
 import ExerciseList from './components/ExercisesComponents/ExercisesList';
+import MyOnlineTrainingsList from './components/MyOnlineTrainingsList';
+import MyClients from './components/MyClients/MyClients';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
   const stateIsLoggedIn: boolean = useTypedSelector(state => state.user.isLoggedIn)
   const { user, loading } = useTypedSelector(state => state.user)
 
-  const { trainings, sysLoading } = useTypedSelector(state => state.system)
+  const { trainings, sysLoading, users } = useTypedSelector(state => state.system)
   const [isLoggedIn, setisloggedin] = useState(stateIsLoggedIn)
 
   useEffect(() => { dispatch(fetchData()) }, [isLoggedIn, stateIsLoggedIn])
@@ -31,7 +32,7 @@ function App() {
   if ( stateIsLoggedIn )
   {
     return (
-      <Context.Provider value={{setisloggedin, trainings, user, sysLoading, loading, stateIsLoggedIn}}>         
+      <Context.Provider value={{setisloggedin, trainings, user, users, sysLoading, loading, stateIsLoggedIn}}>         
         <BrowserRouter>
           <div className="row m-0" style={{ height: "100vh" }}>
             <div className="col-2 p-0 h-100">
@@ -46,10 +47,11 @@ function App() {
                     <Route path="/home"               element = { <TrainingList/> } />
                     <Route path="/training/:id"       element = { <TrainingFullInfo/> } />
                     <Route path="/trainings"          element = { <TrainingList/> } />
-                    <Route path="/mytraininginfo/:id" element = { <MyTrainingInfo/> }/>
-                    <Route path="/exercise/:id"           element = { <ExerciseAnim/> }/>
+                    <Route path="/exercise/:id"       element = { <ExerciseAnim/> }/>
                     <Route path="/mycourses"          element = { <MyCourses/> } />
+                    <Route path="/mytrainings"        element = { <MyOnlineTrainingsList/> }/>
                     <Route path="/exerciselist/:id"   element = { <ExerciseList/> }/>
+                    <Route path="/myclients"          element = { <MyClients /> }/>
                     <Route path="/*"                  element = { <TrainingList/> } />
                   </Routes>
               </div>

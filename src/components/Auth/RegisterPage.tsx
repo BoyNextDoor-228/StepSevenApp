@@ -17,7 +17,6 @@ const RegisterPage: React.FC = () => {
 
     const registryAttempt = async (e: React.FormEvent) => 
     {
-        console.log(fields)
         e.preventDefault()
         if (fields.firstnameValue.trim() && fields.lastnameValue.trim() && fields.emailValue.trim() && fields.passwordValue.trim() && fields.confirmpwdValue.trim() )
         {
@@ -27,7 +26,7 @@ const RegisterPage: React.FC = () => {
                 switch (result) 
                 {
                     case "USER_EXISTS"     : setErrorText("Пользователь с таким логином уже существует"); return 0
-                    case "EVERYTHING_IS_OK": setisloggedin(result); console.log("workkks?")     ; return 0
+                    case "EVERYTHING_IS_OK": setisloggedin(result)    ; return 0
                     default: setErrorText("")
                 }
             }

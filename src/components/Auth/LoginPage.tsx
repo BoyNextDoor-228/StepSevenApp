@@ -22,7 +22,6 @@ const LoginPage: React.FC = () => {
         if (loginField.trim() && pwdField.trim())
         {            
             let result: string = await dispatch(getUserByEmail(loginField, pwdField))
-            console.log("ERROR", result)
             setErrorText("")
             switch (result) 
             {

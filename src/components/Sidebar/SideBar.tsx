@@ -1,36 +1,38 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import Context from "../../context";
 import { logout } from "../../store/actions/userActions";
 
 
 const Sidebar = () => { 
     const dispatch = useDispatch()
+    const { user } = useContext(Context)
     const LinkStyles = "text-decoration-none d-flex my-4"
     const imgStyles = { width: "10%", height: "10%" }
 
-    const [activeTab, setActiveTab] = useState({homeLink: false, secondLink: false, thirdLink: false, trnngsLink: false, fourthLink: false})
+    const [activeTab, setActiveTab] = useState({homeLink: false, mycoursesLink: false, myclientsLink: false, trnngsLink: false, fourthLink: false})
                                                 
     const activateLink = (linkTab: number) => {
         switch (linkTab)
         {
             case 1:
-                setActiveTab({homeLink: true, secondLink: false, thirdLink: false, trnngsLink: false, fourthLink: false});
+                setActiveTab({homeLink: true, mycoursesLink: false, myclientsLink: false, trnngsLink: false, fourthLink: false});
                 break;
             case 2: 
-                setActiveTab({homeLink: false, secondLink: true, thirdLink: false, trnngsLink: false, fourthLink: false});
+                setActiveTab({homeLink: false, mycoursesLink: true, myclientsLink: false, trnngsLink: false, fourthLink: false});
                 break;
             case 3: 
-                setActiveTab({homeLink: false, secondLink: false, thirdLink: true, trnngsLink: false, fourthLink: false});
+                setActiveTab({homeLink: false, mycoursesLink: false, myclientsLink: true, trnngsLink: false, fourthLink: false});
                 break;
             case 4:
-                setActiveTab({homeLink: false, secondLink: false, thirdLink: false, trnngsLink: true, fourthLink: false});
+                setActiveTab({homeLink: false, mycoursesLink: false, myclientsLink: false, trnngsLink: true, fourthLink: false});
                 break;
             case 5:
-                setActiveTab({homeLink: false, secondLink: false, thirdLink: false, trnngsLink: false, fourthLink: true});
+                setActiveTab({homeLink: false, mycoursesLink: false, myclientsLink: false, trnngsLink: false, fourthLink: true});
                 break;
             default:
-                setActiveTab({homeLink: true, secondLink: false, thirdLink: false, trnngsLink: false, fourthLink: false})
+                setActiveTab({homeLink: true, mycoursesLink: false, myclientsLink: false, trnngsLink: false, fourthLink: false})
         }
     }
 
@@ -45,13 +47,13 @@ const Sidebar = () => {
                           onClick={() => { activateLink(1) }}><img className="ps-4  h-25 w-25" src={require('../../images/icons/home.png')} style={imgStyles}/><span className="ps-3" style={{fontSize: "14px"}}>Главная</span></Link>
                     <Link to={{ pathname: "/mycourses" }} 
                           className={LinkStyles}
-                          style={ activeTab.secondLink ? {color: "#F0F6FF"} : {color: "#767C94"} }
-                          onClick={() => { activateLink(2) }}><img className="ms-5" src={require(`../../images/icons/${activeTab.secondLink ? "courses-selected" : "courses"}.png`)} style={imgStyles}/><span className="ps-3" style={{fontSize: "14px"}}>Мои курсы</span></Link>
-                    <Link to={{ pathname: "/trags" }} 
+                          style={ activeTab.mycoursesLink ? {color: "#F0F6FF"} : {color: "#767C94"} }
+                          onClick={() => { activateLink(2) }}><img className="ms-5" src={require(`../../images/icons/${activeTab.mycoursesLink ? "courses-selected" : "courses"}.png`)} style={imgStyles}/><span className="ps-3" style={{fontSize: "14px"}}>Мои курсы</span></Link>
+                    { user.exp > 1 ? <Link to={{ pathname: "/myclients" }} 
                           className={LinkStyles}
-                          style={ activeTab.thirdLink ? {color: "#F0F6FF"} : {color: "#767C94"} }
-                          onClick={() => { activateLink(3) }}><img className="ms-5" src={require(`../../images/icons/${activeTab.thirdLink ? "clients-selected" : "clients"}.png`)} style={imgStyles}/><span className="ps-3" style={{fontSize: "14px"}}>Мои клиенты</span></Link>
-                    <Link to={{ pathname: "/trainings" }} 
+                          style={{ color: activeTab.myclientsLink ? "#F0F6FF" : "#767C94"}}
+                          onClick={() => { activateLink(3) }}><img className="ms-5" src={require(`../../images/icons/${activeTab.myclientsLink ? "clients-selected" : "clients"}.png`)} style={imgStyles}/><span className="ps-3" style={{fontSize: "14px"}}>Мои клиенты</span></Link> : null }
+                    <Link to={{ pathname: "/mytrainings" }} 
                           className={LinkStyles}
                           style={ activeTab.trnngsLink ? {color: "#F0F6FF"} : {color: "#767C94"} }
                           onClick={() => { activateLink(4) }}><img className="ms-5" src={require(`../../images/icons/${activeTab.trnngsLink ? "workout-selected" : "workout"}.png`)} style={imgStyles}/><span className="ps-3" style={{fontSize: "14px"}}>Тренировки</span></Link>

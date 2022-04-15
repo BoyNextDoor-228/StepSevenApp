@@ -6,6 +6,7 @@ export enum UserActionTypes {
     FETCH_USER_ERROR = 'FETCH_USER_ERROR',
     CREATE_USER = 'CREATE_USER',
     USER_SUBSCRIBES_A_NEW_TRAINING = 'USER_SUBSCRIBES_A_NEW_TRAINING',
+    USER_PASSES_EXERCISE = 'USER_PASSES_EXERCISE',
     USER_LOGS_OUT = 'USER_LOGS_OUT'
 }
 
@@ -17,13 +18,14 @@ export interface IUser {
     email    : string;
     pswrd?   : string;
     age      : number;
-    sports   : number[]; 
+    sports   : { s_id: number, counter: number }[]; 
     //trainers?: ITrainer[] | null; 
     clients? : number[] | null; 
     gender       : string ;
     kindOfSport? : string;
     exp?         : number;
     achievements?: string;
+    pic?: string;
 }
 
 export interface UserState {
@@ -54,6 +56,11 @@ interface CreateUserAction {
 
 interface UserSubscribesNewTraining {
         type: UserActionTypes.USER_SUBSCRIBES_A_NEW_TRAINING
+        payload: { s_id: number, counter: number }
+}
+
+interface userPassesExercise {
+        type: UserActionTypes.USER_PASSES_EXERCISE
         payload: number
 }
 
@@ -66,4 +73,5 @@ export type UserAction = FetchUserAction |
                     FetchUserErrorAction | 
                         CreateUserAction |
                UserSubscribesNewTraining |
-               UserLogsOut
+               UserLogsOut               |
+               userPassesExercise

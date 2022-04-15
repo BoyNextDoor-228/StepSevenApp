@@ -5,7 +5,8 @@ import { ITraining } from '../../types/mainSystem';
 
 interface I_MyCourseCard_Props 
 {
-    training: ITraining
+    training: ITraining;
+    arePassed: boolean;
 }
 
 const MyCourseCard: React.FC<I_MyCourseCard_Props> = (props: I_MyCourseCard_Props) => {
@@ -14,8 +15,8 @@ const MyCourseCard: React.FC<I_MyCourseCard_Props> = (props: I_MyCourseCard_Prop
 
       return (
     <div className="row mb-4" 
-         style={{width: "90%", height: "30%", borderRadius: "15px", backgroundColor: "#F5EFED"}}
-         onClick={() => { props.training.isWithTrainer ? navigate(`/mytraininginfo/${props.training.id}`) : navigate(`/exerciselist/${props.training.id}`) } }>
+         style={{width: "90%", height: "30%", borderRadius: "15px", backgroundColor: props.arePassed ? "#E1E5EE" : "#F5EFED"}}
+         onClick={() => { if(!props.training.isWithTrainer) navigate(`/exerciselist/${props.training.id}`) } }>
         <div className="col-7 pt-1 ps-4 d-flex flex-wrap align-content-around">
             <div className="">
                 <h4>{props.training.title}</h4>

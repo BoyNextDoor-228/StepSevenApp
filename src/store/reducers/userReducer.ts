@@ -13,6 +13,7 @@ const initialState: UserState = {
             gender: "",
             kindOfSport: "",
             exp: -1,
+            pic: "",
             achievements: ""
         }, 
     isLoggedIn: false,
@@ -41,6 +42,7 @@ export const userReducer = (state = initialState, action: UserAction): UserState
                                                      gender: action.payload.gender,
                                                      kindOfSport: action.payload.kindOfSport,
                                                      exp: action.payload.exp,
+                                                     pic: action.payload.pic,
                                                      achievements: action.payload.achievements } }
 
     // =======================================================================================        
@@ -56,9 +58,8 @@ export const userReducer = (state = initialState, action: UserAction): UserState
     // ======================================================================================= 
 
         case UserActionTypes.USER_SUBSCRIBES_A_NEW_TRAINING: 
-            console.log("BEFORE",state)
+            //const addTrainingUpdatedState = { ...state, user: { ...state.user, sports: [...state.user.sports, action.payload] } }
             const addTrainingUpdatedState = { ...state, user: { ...state.user, sports: [...state.user.sports, action.payload] } }
-            console.log("after",addTrainingUpdatedState)
             return { ...state, user: addTrainingUpdatedState.user }
 
 

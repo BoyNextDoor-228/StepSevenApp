@@ -1,3 +1,5 @@
+import { IUser } from "./user";
+
 export enum KindsOfSport
 {
     YOGA = "Йога",
@@ -18,6 +20,7 @@ export interface IMainSystemState
     trainings: ITraining[];
     trainers : ITrainer[] | null;
     sysLoading: boolean;
+    users: IUser[];
 }
 
 export interface ITraining {
@@ -34,7 +37,7 @@ export interface ITraining {
     load         : string;
     users        : number[];
     link         : string;
-    nextTrainingTime : string;
+    nextTrainingTime : string[];
 
 }
 
@@ -63,7 +66,7 @@ export interface ITrainer
 interface IFetchTrainingSuccess 
 {
     type: "FETCH_MAIN_DATA_SUCCESS";
-    payload: ITraining[]
+    payload: { u_data: IUser[], t_data: ITraining[]} 
 }
 
 interface IFetchTraining 
@@ -77,4 +80,10 @@ interface IUserJoinsTraining
     payload: { trainingId: number, userId: number };
 }
 
-export type MainSystemAction = IFetchTrainingSuccess | IFetchTraining | IUserJoinsTraining
+interface IAddNewTrainingTime 
+{
+    type: "ADD_NEW_TRAINING_TIME";
+    payload: { c_id: number, c_time: string, c_link: string };
+}
+
+export type MainSystemAction = IFetchTrainingSuccess | IFetchTraining | IUserJoinsTraining | IAddNewTrainingTime

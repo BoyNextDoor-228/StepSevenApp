@@ -10,7 +10,7 @@ const ExerciseList = () => {
     const navigate = useNavigate()
     const urlParams = useParams()
     const trnng: ITraining = trainings.find( (training:ITraining) => { if(training.id.toString() === urlParams.id) return true } )
-    const isUserSubscribedThisTraining: boolean = user.sports.find( (sport:number) => { if(sport.toString() === urlParams.id) return true  } )
+    const isUserSubscribedThisTraining: boolean = user.sports.find( (sport: { s_id: number, counter: number } ) => { if(sport.s_id.toString() === urlParams.id) return true  } )
 
     const checkIfValid = () => { if (stateIsLoggedIn === false) setisloggedin(false)  }
     useEffect(() => { checkIfValid(); navigate(`/exerciselist/${urlParams.id}`);  }, [user])
@@ -26,7 +26,7 @@ const ExerciseList = () => {
                     <p>Курс от {trnng.trainer.name}</p>
                     <Container style={{ }}>
                         <Row xs={4} className="g-4">
-                            {trnng.exercises.map((exercise:IExercise) => {return <Col key={exercise.id}><ExerciseCard key={exercise.id} exerciseInfo={exercise} seqNumber={trnng.exercises.indexOf(exercise)} trainingType={trnng.kindOfSport} redirectable={true}/> </Col>})}
+                            {trnng.exercises.map((exercise:IExercise) => {return <Col key={exercise.id}><ExerciseCard key={exercise.id} exerciseInfo={exercise} seqNumber={trnng.exercises.indexOf(exercise)} trainingType={trnng.kindOfSport} trainingId={trnng.id} redirectable={true}/> </Col>})}
                         </Row>
                     </Container>
                 </div>

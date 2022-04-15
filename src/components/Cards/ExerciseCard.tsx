@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Context from '../../context';
+import { userPassesExercise } from '../../store/actions/userActions';
 import { IExercise } from '../../types/mainSystem';
 
 interface I_ExerciseCard_Props 
@@ -8,15 +11,18 @@ interface I_ExerciseCard_Props
     seqNumber: number;
     trainingType: string;
     redirectable: boolean;
+    trainingId: number;
 }
 
 const ExerciseCard: React.FC<I_ExerciseCard_Props> = (props:I_ExerciseCard_Props) => {
+    const { trainings, user } = useContext(Context)
+    const dispatch = useDispatch()
     const navigate = useNavigate()
     const picPath = require(`../../images/anims/${props.trainingType}/pics/${props.exerciseInfo.pic}.png`)
 
     return (
         <div style={{ height: "25vh", width: "85%" }}
-             onClick={() => { if(props.redirectable) navigate(`/exercise/${props.exerciseInfo.path}`)  } }>
+             onClick={() => { if(props.redirectable) dispatch(userPassesExercise(user.id, props.trainingId)) ; navigate(`/exercise/${props.exerciseInfo.path}`)  } }>
             <div className="d-flex h-75 w-100 p-2" style={{ borderRadius: "10px", backgroundImage: `url(${picPath})`, backgroundSize: "cover" }}>
                 <div className="bg-white ps-1" 
                      style={{ height: "25%", width: "45%", borderRadius: "10px" }}>

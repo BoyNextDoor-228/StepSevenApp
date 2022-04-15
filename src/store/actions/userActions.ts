@@ -10,7 +10,8 @@ export const getUserByEmail = (a_email: string, a_password: string): any => {
         })
         if (response.data[0] == undefined) { dispatch({ type: UserActionTypes.FETCH_USER_ERROR, payload: "NO_SUCH_USER" }) ; return "NO_SUCH_USER" }
         if (response.data[0]?.pwd === a_password) 
-        {           
+        {          
+             
             dispatch({ type: UserActionTypes.FETCH_USER_SUCCESS, payload: response.data[0] }) ; return "EVERYTHING_IS_OK"
         }
         else dispatch({ type: UserActionTypes.FETCH_USER_ERROR, payload: "WRONG_PWD" }) ; return "WRONG_PWD"
@@ -21,13 +22,21 @@ export const userSubsribedNewTraining = (a_userId: number, a_trainingId: number)
     return async(dispatch: Dispatch<UserAction | MainSystemAction>) => {
 
         const responseUser = await axios.get(`http://localhost:4200/users/${a_userId}`)
-        responseUser.data.sports.push(a_trainingId)
+        responseUser.data.sports.push({ s_id: a_trainingId, counter: 0 })
         axios.patch(`http://localhost:4200/users/${a_userId}`, {sports: responseUser.data.sports})
         const responseTraining = await axios.get(`http://localhost:4200/trainings/${a_trainingId}`)
         responseTraining.data.users.push(a_userId)
         axios.patch(`http://localhost:4200/trainings/${a_trainingId}`, {users: responseTraining.data.users})
-        dispatch({ type: UserActionTypes.USER_SUBSCRIBES_A_NEW_TRAINING, payload: a_trainingId })
+        dispatch({ type: UserActionTypes.USER_SUBSCRIBES_A_NEW_TRAINING, payload: { s_id: a_trainingId, counter: 0 } })
         dispatch({ type: "USER_JOINS_TRAINING", payload: { trainingId: a_trainingId, userId: a_userId } })
+    }
+}
+
+export const userPassesExercise = (a_userId: number, a_sportId: number) => {
+    return async (dispatch: Dispatch<UserAction>) => {
+        const response = await axios.get(`http://localhost:4200/users/${a_userId}`)
+        const encountedArray = response.data.sports.map( (sport: { s_id: number, counter: number }) => { if (sport.s_id === a_sportId) { return { s_id: sport.s_id, counter: sport.counter + 1 } } else return sport  } )
+        axios.patch(`http://localhost:4200/users/${a_userId}`, { sports: encountedArray } )
     }
 }
 
@@ -55,7 +64,7 @@ export const createNewUser = (a_firtsname: string, a_lastname: string, a_login: 
             const lastname: string  = a_lastname;
             const email: string     = a_login;
             const age: number       = a_age;
-            const sports: number[]  = [];
+            const sports: { s_id: number, counter: number }[]  = [];
             //const trainers: ITrainer[] = []; // should be array of ITrainer or null
             const clients: any[]    = []; 
             const gender: string    = a_gender;

@@ -15,7 +15,7 @@ const TrainigFullInfo: React.FC = () => {
     const dispatch = useDispatch()
     const trnng: ITraining = trainings.find( (training:ITraining) => { if(training.id.toString() === urlParams.id) return true } )
 
-    var hasSubscribed: boolean = user.sports.find( (sport:number) => { if(sport.toString() === urlParams.id) return true  } )
+    var hasSubscribed: boolean = user.sports.find( (sport: { s_id: number, counter: number }) => { if(sport.s_id.toString() === urlParams.id) return true  } )
     const [stateHasSubscribed, setHasSubscribed] = useState(hasSubscribed)
     
     const processRequest = () => 
@@ -71,7 +71,7 @@ const TrainigFullInfo: React.FC = () => {
                                     <h3 className="pt-3 fw-bold">Тренировки</h3>
                                     <Container style={{  paddingLeft: "7%" }}>
                                       <Row xs={3} className="g-4">
-                                          {trnng.exercises.map((exercise:IExercise) => {return <Col key={exercise.id}><ExerciseCard key={exercise.id} exerciseInfo={exercise} seqNumber={trnng.exercises.indexOf(exercise)} trainingType={trnng.kindOfSport} redirectable={false}/> </Col>})}
+                                          {trnng.exercises.map((exercise:IExercise) => {return <Col key={exercise.id}><ExerciseCard key={exercise.id} exerciseInfo={exercise} seqNumber={trnng.exercises.indexOf(exercise)} trainingType={trnng.kindOfSport} trainingId={trnng.id} redirectable={false}/> </Col>})}
                                       </Row>
                                     </Container>
                                   </div> 
@@ -89,7 +89,7 @@ const TrainigFullInfo: React.FC = () => {
                     <img src={require('../images/icons/workout-selected.png')} className="pe-3"/>{trnng.kindOfSport}
                   </div>
                   <div className="w-100 text-white text-center fs-5 pt-2 mb-4" style={{ borderRadius: "5px", backgroundColor: "#2A324B", height: "50px" }}>
-                  <img src={require('../images/icons/timeW.png')} className="pe-3"/>{trnng.exercises.length} занятий
+                  <img src={require('../images/icons/timeW.png')} className="pe-3"/>{trnng.trainingsAmount} занятий
                   </div>
                   <div className="w-100 text-white text-center fs-5 pt-2" style={{ borderRadius: "5px", backgroundColor: "#2A324B", height: "50px" }}>
                   <img src={require('../images/icons/loadW.png')} className="pe-3"/>{trnng.load} нагрузка

@@ -40,7 +40,6 @@ export default function Model(props) {
           skeleton={nodes.Ресницы019.skeleton}
         />
       </group>
-      <mesh geometry={nodes.Cube.geometry} material={materials.Material} />
     </group>
   )
 }
