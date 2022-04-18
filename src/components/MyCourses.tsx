@@ -15,7 +15,6 @@ const MyCourses: React.FC = () => {
     const inprogressTrainings: ITraining[] = []
     const passedTrainings: ITraining[] = []
 
-
     const init = (): ITraining[] => {
         trainings.forEach((training: ITraining) => { 
             user.sports.forEach((sport: { s_id: number, counter: number }) => { 
@@ -70,7 +69,6 @@ const MyCourses: React.FC = () => {
                     <p style={{fontSize: "12px"}}>Здесь представлены курсы, на которые вы записаны</p>
                 </div>
                 <div className="row" style={{height: "85%"}}>
-                    
                     <div className="col-9 pt-2" style={{overflow: "hidden", overflowY: "scroll", height: "100%", paddingLeft: "6%" }}>
                     <h4 className="fw-bold" style={{height: "5%", marginBottom: "20px"}} >В процессе</h4>
                         {stateTrainings?.map((course:ITraining) => { return <MyCourseCard key={course.id} training={ course } arePassed={false}/> })}
