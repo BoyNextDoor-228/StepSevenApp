@@ -16,4 +16,4 @@ Used technologies stack:
 - Bootstrap
 - Axios (for requests and responses)
 - ThreeJS (for working with 3D models)
-- Gltfjsx (for turning a GLTF model into JSX component)
+- Gltfjsx (for turning a GLTF model into JSX component) 
